@@ -92,7 +92,8 @@ try {
   previous = await readFile(parksFile, 'utf8');
 } catch {}
 
-if (previous === parksJson) {
+// Compare ignoring Windows line endings (git may check the file out as CRLF)
+if (previous !== null && previous.replace(/\r\n/g, '\n') === parksJson) {
   console.log(`No changes (${parks.length} parks). Files left untouched.`);
 } else {
   const meta = {
