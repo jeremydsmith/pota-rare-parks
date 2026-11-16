@@ -1,0 +1,17 @@
+{
+  "title": "POTA Rare Parks",
+  "repo": "jeremydalesmith-websites/pota-rare-parks",
+  "home": { "name": "Lincoln, Nebraska", "lat": 40.8136, "lon": -96.7026 },
+  "states": [
+    { "code": "US-NE", "name": "Nebraska" },
+    { "code": "US-KS", "name": "Kansas" },
+    { "code": "US-IA", "name": "Iowa" },
+    { "code": "US-MO", "name": "Missouri" },
+    { "code": "US-SD", "name": "South Dakota" }
+  ],
+  "api": {
+    "parksByLocation": "https://api.pota.app/location/parks/{code}",
+    "userAgent": "pota-rare-parks/1.0 (personal hobby map of rarely activated parks; one request per state per night)",
+    "delayMs": 2000
+  }
+}

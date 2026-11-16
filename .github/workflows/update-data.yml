@@ -1,0 +1,39 @@
+name: Update park data
+
+on:
+  schedule:
+    # Nightly at 09:17 UTC (about 3-4 am US Central). Off the hour on purpose.
+    - cron: "17 9 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-data
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Show Node version (preinstalled on the runner)
+        run: node --version
+
+      - name: Fetch park lists from pota.app
+        run: node scripts/update-data.mjs
+
+      - name: Commit /data if it changed
+        run: |
+          if [ -z "$(git status --porcelain -- data)" ]; then
+            echo "No data changes. Nothing to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data
+          git commit -m "Update park data"
+          git push

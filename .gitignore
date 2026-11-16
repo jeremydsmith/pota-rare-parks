@@ -1,0 +1,24 @@
+# Personal POTA exports (they contain my_activations / my_hunted_qsos).
+# Load them in the site with "Load my CSV"; never commit them.
+*.csv
+*.ods
+*.xlsx
+*.xls
+*.adi
+*.adif
+my-data/
+private/
+
+# Credentials of any kind
+.env
+.env.*
+*.pem
+*.key
+*token*
+*secret*
+
+# Local tooling
+node_modules/
+.claude/
+.DS_Store
+Thumbs.db
