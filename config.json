@@ -7,7 +7,11 @@
     { "code": "US-KS", "name": "Kansas" },
     { "code": "US-IA", "name": "Iowa" },
     { "code": "US-MO", "name": "Missouri" },
-    { "code": "US-SD", "name": "South Dakota" }
+    { "code": "US-SD", "name": "South Dakota" },
+    { "code": "US-MN", "name": "Minnesota" },
+    { "code": "US-OK", "name": "Oklahoma" },
+    { "code": "US-IL", "name": "Illinois" },
+    { "code": "US-CO", "name": "Colorado" }
   ],
   "api": {
     "parksByLocation": "https://api.pota.app/location/parks/{code}",

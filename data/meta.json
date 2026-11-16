@@ -1,19 +1,27 @@
 {
-  "generatedAt": "2026-11-16T02:49:04.675Z",
+  "generatedAt": "2026-11-16T04:17:42.317Z",
   "source": "https://api.pota.app/location/parks/{code}",
   "states": [
     "US-NE",
     "US-KS",
     "US-IA",
     "US-MO",
-    "US-SD"
+    "US-SD",
+    "US-MN",
+    "US-OK",
+    "US-IL",
+    "US-CO"
   ],
   "parksPerState": {
     "US-NE": 201,
     "US-KS": 145,
     "US-IA": 181,
     "US-MO": 561,
-    "US-SD": 120
+    "US-SD": 120,
+    "US-MN": 323,
+    "US-OK": 205,
+    "US-IL": 219,
+    "US-CO": 276
   },
-  "totalParks": 1195
+  "totalParks": 2204
 }
