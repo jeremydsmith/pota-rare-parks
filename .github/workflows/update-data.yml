@@ -5,6 +5,13 @@ on:
     # Nightly at 09:17 UTC (about 3-4 am US Central). Off the hour on purpose.
     - cron: "17 9 * * *"
   workflow_dispatch:
+  # Also refresh when the state list or the script changes (e.g. a state was added)
+  push:
+    branches: [main]
+    paths:
+      - config.json
+      - scripts/update-data.mjs
+      - .github/workflows/update-data.yml
 
 permissions:
   contents: write

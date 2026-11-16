@@ -54,7 +54,8 @@ it leaves the files (and the timestamp) alone.
 ## How the nightly update works
 
 `.github/workflows/update-data.yml` runs the same script every night at 09:17
-UTC and commits `data/` only when it changed. GitHub Pages republishes
+UTC, and also whenever `config.json` or the script is pushed. It commits
+`data/` only when it changed. GitHub Pages republishes
 automatically after that commit.
 
 To refresh on demand, open the repo's **Actions** tab, pick **Update park
@@ -79,7 +80,9 @@ pota.app shows in its park list (for example `US-CO`):
 { "code": "US-CO", "name": "Colorado" }
 ```
 
-Run the update script, commit, push. The new state shows up in the site's state
+Commit and push. The workflow runs by itself whenever `config.json` or the
+update script changes, so the data refreshes a minute or two later (or run the
+update script yourself first). The new state shows up in the site's state
 filter by itself. Parks that span several states are stored once.
 
 ## Load my own activations
