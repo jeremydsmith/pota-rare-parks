@@ -5,7 +5,7 @@
 
   const SETTINGS_KEY = 'potaRare.settings.v1';
   const MINE_KEY = 'potaRare.myActivations.v1';
-  const RINGS_MI = [100, 200, 300];
+  const RINGS_MI = [50, 100, 200, 300, 400];
   const M_PER_MI = 1609.344;
   const UNCLUSTER_ZOOM = 10;
 

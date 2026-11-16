@@ -113,7 +113,8 @@ Then open http://localhost:8765.
 ## Notes on the map
 
 - Dot colors by activation count: 0-3 red, 4-5 orange, 6-8 amber, 9-12 yellow,
-  13+ tan. Dashed circles with "×N" are clusters, colored by their rarest park.
+  13+ tan. Dashed distance rings sit at 50, 100, 200, 300 and 400 miles from home. Dashed
+  circles with "×N" are clusters, colored by their rarest park.
 - Distances are straight-line miles from home, not driving miles.
 - The flags (closed / seasonal, hike / boat / rough road, permit, fee) come from
   keyword matching on the free-text notes. They miss things and sometimes
